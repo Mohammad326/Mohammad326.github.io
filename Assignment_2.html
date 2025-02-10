@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Webpage</title>
+    <style>
+        /* Page Background Styling */
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        /* Centered Block Styling */
+        .container {
+            width: 60%;
+            margin: 30px auto;
+            background-color: powderblue;
+            padding: 20px;
+            border: 5px solid gold;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Heading Styling */
+        h1 {
+            font-size: 28px;
+            color: black;
+            text-shadow: 2px 2px 3px gray;
+        }
+
+        /* Paragraph Styling */
+        p {
+            font-size: 16px;
+            color: black;
+        }
+
+        /* Link Styling */
+        a {
+            color: blue;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+
+        /* Image Styling */
+        .images {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .images img {
+            width: 80px;
+            height: 80px;
+        }
+
+        /* Textarea Styling */
+        textarea {
+            width: 80%;
+            height: 60px;
+            margin: 10px 0;
+            padding: 5px;
+            border: 2px solid black;
+        }
+
+        /* Video Styling */
+        iframe {
+            width: 60%;
+            height: 250px;
+            margin-top: 15px;
+            border: 3px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Hello Again!</h1>
+        <p>This is a block with background color powderblue.<br>
+        The width of this block is same as the table.<br>
+        Read study materials, you will need HTML elements <code>&lt;div&gt;</code>, <code>&lt;figure&gt;</code>, and <code>&lt;figcaption&gt;</code>.</p>
+
+        <p style="color: whitesmoke;"><b>Try to use style attribute to change link color</b></p>
+        
+        <a href="https://www.qcc.cuny.edu" target="_blank">This is a link: QCC Website</a>
+
+        <style>
+            .images {
+                display: flex;
+                justify-content: center;
+                gap: 10px; /* Adds space between images */
+                margin: 10px 0;
+            }
+        
+            .images img {
+                width: 200px;  /* Increased size */
+                height: 200px; /* Increased size */
+                border: 2px solid black; /* Optional: Add border */
+                border-radius: 10px; /* Optional: Rounded corners */
+            }
+        </style>
+
+        <div class="images">
+            <img src="Empire_State_Building_NYC.jpg" alt="Empire State Building NYC">
+            <img src="Statue_of_Liberty.jpg" alt="Statue of Liberty">
+        </div>
+
+        <textarea>Get familiar with using HTML elements &lt;div&gt;, &lt;figure&gt; and &lt;figcaption&gt;</textarea>
+
+        <iframe src="https://www.youtube.com/embed/Dxcc6ycZ73M" allowfullscreen></iframe>
+    </div>
+
+</body>
+</html>
