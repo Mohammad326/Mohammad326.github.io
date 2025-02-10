@@ -1,0 +1,53 @@
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Table Border Glow Effect */
+table:hover {
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.6);
+    transform: scale(1.02);
+}
+
+/* Header Styling */
+th {
+    background-color: #2C3E50; /* Dark Navy */
+    color: #F1C40F; /* Gold Text */
+    padding: 12px;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Header Hover Animation */
+th:hover {
+    background-color: #34495E;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Alternating Row Colors */
+tr:nth-child(even) {
+    background-color: #D7CCC8; /* Soft Beige */
+}
+
+tr:nth-child(odd) {
+    background-color: #FFF8DC; /* Light Yellow */
+}
+
+/* Row Hover Animation */
+tr:hover {
+    background-color: #FFEB3B; /* Bright Yellow */
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Table Cell Styling */
+th, td {
+    border: 2px solid black;
+    padding: 12px;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
