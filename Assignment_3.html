@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bird Gallery</title>
+    <link rel="stylesheet" href="ET710_Assignment_3.css">
+</head>
+<body>
+
+    <h1>ET710 Assignment 3 by Mohammad Pervaiz</h1>
+    
+    <div class="gallery">
+        <div class="card">
+            <img src="White_Bird.jpg" alt="Bird 1" class="filter1">
+            <h2>Bird 1</h2>
+            <p>Description: Bird 1</p>
+            <a href="#" onclick="toggleInfo(event, 'info1')">(check more)</a>
+            <p class="extra-info" id="info1">Bird 1 is known for its white plumage and graceful flight.</p>
+        </div>
+
+        <div class="card">
+            <img src="Bird_2.webp" alt="Bird 2" class="filter2">
+            <h2>Bird 2</h2>
+            <p>Description: Bird 2</p>
+            <a href="#" onclick="toggleInfo(event, 'info2')">(check more)</a>
+            <p class="extra-info" id="info2">Bird 2 is a tropical species often found in dense rainforests.</p>
+        </div>
+
+        <div class="card">
+            <img src="Bird_3.webp" alt="Bird 3" class="filter3">
+            <h2>Bird 3</h2>
+            <p>Description: Bird 3</p>
+            <a href="#" onclick="toggleInfo(event, 'info3')">(check more)</a>
+            <p class="extra-info" id="info3">Bird 3 has a strong beak and is an expert at catching fish.</p>
+        </div>
+
+        <div class="card">
+            <img src="Bird_4.jpg" alt="Bird 4" class="filter4">
+            <h2>Bird 4</h2>
+            <p>Description: Bird 4</p>
+            <a href="#" onclick="toggleInfo(event, 'info4')">(check more)</a>
+            <p class="extra-info" id="info4">Bird 4 is well known for its bright green feathers and sharp eyesight.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleInfo(event, infoId) {
+            event.preventDefault(); // Prevents the link from redirecting
+            var infoElement = document.getElementById(infoId);
+            if (infoElement.style.display === "none" || infoElement.style.display === "") {
+                infoElement.style.display = "block";
+            } else {
+                infoElement.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
