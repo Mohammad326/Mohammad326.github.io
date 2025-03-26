@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Modals</title>
+  <link rel="stylesheet" href="ET710_Assignment_6.css">
+</head>
+<body>
+  <div class="main">
+    <div class="product">
+      <img src="PC_pic.webp" alt="Product 1">
+      <p>This is a high-end gaming pc</p>
+      <button id="openModal1">View More</button>
+    </div>
+
+    <div class="product">
+      <img src="NY_Central_Park.jpg" alt="Product 2">
+      <p>This is Central Park located in New York</p>
+      <button id="openModal2">View More</button>
+    </div>
+  </div>
+
+  <!-- Modal One -->
+  <div id="modal1" class="modal">
+    <div class="modal-content blue">
+      <span class="close" id="closeModal1">&times;</span>
+      <h2>Modal Window One</h2>
+      <p>[HIGH END] 4K Streaming/Gaming PC (i7-12700K, 32GB DDR4, RX 6800XT 16GB, 1TB GEN 4 NVME).</p>
+    </div>
+  </div>
+
+  <!-- Modal Two -->
+  <div id="modal2" class="modal">
+    <div class="modal-content green">
+      <span class="close" id="closeModal2">&times;</span>
+      <h2>Modal Window Two</h2>
+      <p>Central Park is the local attraction in New York. Do not go there at night.</p>
+    </div>
+  </div>
+
+  <script>
+    const modal1 = document.getElementById('modal1');
+    const modal2 = document.getElementById('modal2');
+
+    document.getElementById('openModal1').onclick = () => modal1.style.display = 'block';
+    document.getElementById('openModal2').onclick = () => modal2.style.display = 'block';
+
+    document.getElementById('closeModal1').onclick = () => modal1.style.display = 'none';
+    document.getElementById('closeModal2').onclick = () => modal2.style.display = 'none';
+
+    window.onclick = function(event) {
+      if (event.target === modal1) modal1.style.display = 'none';
+      if (event.target === modal2) modal2.style.display = 'none';
+    }
+  </script>
+  <header><center>Assignment 6 made by Mohammad Pervaiz.</center></header>
+</body>
+</html>
