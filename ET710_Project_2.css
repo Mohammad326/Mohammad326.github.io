@@ -1,0 +1,229 @@
+/* General Styling */
+body {
+    background-color: #fffacd; /* Light yellow */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  header {
+    text-align: center;
+    padding: 40px 20px;
+    background: #fffacd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .animated-logo {
+    width: 80px;
+    margin-bottom: 10px;
+    animation: fadeInUp 2s ease-in-out;
+  }
+  
+  .animated-title {
+    margin: 0;
+    animation: fadeInUp 2s ease-in-out;
+  }
+  
+  @keyframes fadeInUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  .slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .slide {
+    display: none;
+    width: 100%;
+  }
+  
+  .fade {
+    animation: fade 9s infinite;
+  }
+  
+  @keyframes fade {
+    0% {opacity: 0;}
+    10% {opacity: 1;}
+    30% {opacity: 1;}
+    40% {opacity: 0;}
+    100% {opacity: 0;}
+  }
+  
+  .hero, .image-text-section {
+    position: relative;
+    text-align: center;
+  }
+  
+  .hero img, .image-text-section img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .text-block {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 20px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    max-width: 300px;
+  }
+  
+  .text-block.right {
+    left: auto;
+    right: 10%;
+  }
+  
+  .products, .gift-sets {
+    padding: 40px 20px;
+    background-color: #fef7cc;
+    
+  }
+  
+  .products h3, .gift-sets h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+  
+  .product-list {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+  
+  }
+  
+  .product {
+    width: 220px;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .product:hover {
+    transform: translateY(-5px);
+  }
+  
+  .add-to-bag {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    background-color: #f0c040;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: bold;
+  }
+  
+  .add-to-bag:hover {
+    background-color: gray;
+    position: relative;
+    transform: scale(1.05);
+  }
+  
+  .add-to-bag:hover::after {
+    content: "Add to Shopping Cart";
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000;
+    color: #fff;
+    padding: 5px 8px;
+    font-size: 0.75em;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+  
+  /* Modal Styling */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+  .modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 30px;
+    width: 320px;
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .continue-shopping {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+  }
+  
+  .continue-shopping:hover {
+    text-decoration: underline;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+  }
+  
+  .footer-content {
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .footer-links, .social-media {
+    margin-bottom: 20px;
+  }
+  
+  .footer-links a, .social-media a {
+    color: white;
+    margin: 0 12px;
+    text-decoration: none;
+    font-size: 0.95em;
+  }
+  
+  .footer-links a:hover, .social-media a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-name {
+    font-size: 0.9em;
+    opacity: 0.8;
+  }  

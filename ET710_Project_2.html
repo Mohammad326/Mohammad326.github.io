@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohammad Pervaiz's Project 2</title>
+  <link rel="stylesheet" href="ET710_Project_2.css">
+</head>
+<body>
+  <!-- Header with Animated Logo and Titles -->
+  <header>
+    <div class="logo-title">
+      <img src="animated_flower.gif" width="225" alt="Logo" class="animated-logo">
+      <h1 class="title animated-title">Welcome to Bloom Boutique</h1>
+      <h2 class="subtitle animated-title">Fresh Flowers for Every Occasion</h2>
+    </div>
+
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+      <div class="slide fade"><img src="Blue_Flower.gif" alt="Blue Flower"></div>
+      <div class="slide fade"><img src="Blue_Flower_2.gif" alt="2nd Blue Flower"></div>
+      <div class="slide fade"><img src="flower_bundle_3.avif" alt="Flower Bundle"></div>
+    </div>
+  </header>
+
+  <!-- Hero Image with Text Block -->
+  <section class="hero">
+    <img src="Flower_bundle.jpg" width= "150" alt="Flower Bundle">
+    <div class="text-block">Beautiful handcrafted arrangements for you</div>
+  </section>
+
+  <!-- Second Flower Image with Text Block on Right -->
+  <section class="image-text-section">
+    <img src="Flower_bundle_2.avif" width="150" alt="2nd Flower Bundle">
+    <div class="text-block right">Perfect for gifts, weddings, and more</div>
+  </section>
+
+  <!-- Single Products Section -->
+  <section class="products">
+    <h3>Single Products</h3>
+    <div class="product-list">
+      <div class="product">
+        <img src="Rose Banquet.jpg" width= "190" alt="Product 1">
+        <p>Rose Bouquet</p>
+        <button class="add-to-bag">ADD TO BAG</button>
+      </div>
+      <div class="product">
+        <img src="Lily Charm.jpg" width="190" alt="Product 2">
+        <p>Lily Charm</p>
+        <button class="add-to-bag">ADD TO BAG</button>
+      </div>
+      <div class="product">
+        <img src="Sunflower Love.avif" width="190" alt="Product 3">
+        <p>Sunflower Love</p>
+        <button class="add-to-bag">ADD TO BAG</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gift Sets Section -->
+  <section class="gift-sets">
+    <h3>Gift Sets</h3>
+    <div class="product-list">
+      <div class="product">
+        <img src="Luxury bloom set.webp" width="190" alt="Gift Set 1">
+        <p>Luxury Bloom Set</p>
+        <button class="add-to-bag">ADD TO BAG</button>
+      </div>
+      <div class="product">
+        <img src="Romantic combo.webp" width="190" alt="Gift Set 2">
+        <p>Romantic Combo</p>
+        <button class="add-to-bag">ADD TO BAG</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Window -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Item added to your bag.</p>
+      <a href="#" class="continue-shopping">CONTINUE SHOPPING</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="#">HELP</a>
+        <a href="#">ACCOUNT</a>
+        <a href="#">SUBSCRIBE</a>
+        <a href="#">THE MEMBER CARE</a>
+      </div>
+      <div class="social-media">
+        <a href="https://facebook.com">Facebook</a>
+        <a href="https://x.com">X</a>
+        <a href="https://instagram.com">Instagram</a>
+        <a href="https://pinterest.com">Pinterest</a>
+        <a href="https://youtube.com">YouTube</a>
+      </div>
+      <p class="footer-name">Created by Mohammad Pervaiz</p>
+    </div>
+  </footer>
+
+  <script src="script.js">
+    // Slideshow functionality
+let slideIndex = 0;
+const slides = document.getElementsByClassName("slide");
+
+function showSlides() {
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) { slideIndex = 1; }
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 3000);
+}
+
+showSlides();
+
+// Modal functionality
+const modal = document.getElementById("modal");
+const closeBtn = document.querySelector(".close");
+const continueShopping = document.querySelector(".continue-shopping");
+const addToBagButtons = document.querySelectorAll(".add-to-bag");
+
+addToBagButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    modal.style.display = "block";
+  });
+});
+
+closeBtn.onclick = function() {
+  modal.style.display = "none";
+}
+
+continueShopping.onclick = function(e) {
+  e.preventDefault();
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+  </script>
+</body>
+</html>
