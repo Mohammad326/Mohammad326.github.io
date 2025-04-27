@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap Webpage Enhanced</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .card-hover img {
+      transition: transform 0.3s ease;
+    }
+    .card-hover:hover img {
+      transform: scale(1.05);
+    }
+    .nav-link, .btn-primary {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container">
+    <ul class="navbar-nav flex-row">
+      <li class="nav-item">
+        <a class="btn btn-primary" href="#">Use list element</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">nav class</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">nav-item class</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">nav-link class</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Main Section -->
+<section class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="mb-3">Hello Again!</h2>
+    <p class="lead mb-4">This is the heart of New York City.</p>
+    <img src="NYC.webp" class="img-fluid rounded shadow" alt="City Image" style="max-width: 600px;">
+    <div class="mt-4">
+      <button class="btn btn-success btn-lg">Click Me!</button>
+    </div>
+  </div>
+</section>
+
+<!-- Cards Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card card-hover h-100 border-0 shadow-sm">
+          <img src="Manhattan_night.jpg" class="card-img-top" alt="City Image 1">
+          <div class="card-body text-center">
+            <h5 class="card-title">Heading 4</h5>
+            <p class="card-text">This is the New York City skyline at night.<br>The city lights brings this place to life.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-hover h-100 border-0 shadow-sm">
+          <img src="NYC_times_square.jpg" class="card-img-top" alt="City Image 2">
+          <div class="card-body text-center">
+            <h5 class="card-title">Heading 4</h5>
+            <p class="card-text">This is Timesquare.<br>Time Square is famous for being a major entertainment hub, a symbol of NYC and a popular tourist destination.<br>Its known for its vibrant atmosphere, massive digital billboards, broadway theaters, and the iconic New Year's Eve ball drop.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-hover h-100 border-0 shadow-sm">
+          <img src="NYC_Central_Park.jpg" class="card-img-top" alt="City Image 3">
+          <div class="card-body text-center">
+            <h5 class="card-title">Heading 4</h5>
+            <p class="card-text">This is Central Park.<br>The biggest park in New York City.<br>Word of Advice: Do not go here at night.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
