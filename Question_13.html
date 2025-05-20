@@ -1,0 +1,93 @@
+<style>
+  .animation-container {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(to right, #6dd5ed, #c56b94);
+    border: 3px solid lime;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 30px;
+  }
+
+  .ball {
+    width: 100px;
+    height: 100px;
+    background: url('Basketball.png') center/cover no-repeat;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #000;
+  }
+
+
+</style>
+
+<div class="animation-container">
+  <div class="ball" id="randomBall"></div>
+</div>
+
+<style>
+  .card {
+    border: 2px solid pink;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 8px 15px rgba(255, 165, 0, 0.5);
+    transition: transform 0.2s;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  .card img {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    margin: 0 auto 10px;
+    display: block;
+  }
+  .badge.bg-pink {
+    background-color: pink;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 10px;
+    display: inline-block;
+  }
+</style>
+
+<script>
+  const ballImages = [
+    'Basketball.png',
+    'American_football.png',
+    'Soccer_ball.jpg',
+    'Tennis_ball.png'
+  ];
+
+  const ballElement = document.getElementById('randomBall');
+
+  function getRandomPosition(container, ballSize) {
+    const maxX = container.clientWidth - ballSize;
+    const maxY = container.clientHeight - ballSize;
+    const x = Math.random() * maxX;
+    const y = Math.random() * maxY;
+    return { x, y };
+  }
+
+  function changeBallImageAndPosition() {
+    const randomIndex = Math.floor(Math.random() * ballImages.length);
+    ballElement.style.backgroundImage = `url('${ballImages[randomIndex]}')`;
+
+    const container = document.querySelector('.animation-container');
+    const { x, y } = getRandomPosition(container, 100); // assuming ball size is 100px
+    ballElement.style.left = `${x}px`;
+    ballElement.style.top = `${y}px`;
+  }
+
+  // Change image and position every 2 seconds
+  setInterval(changeBallImageAndPosition, 2000);
+
+  // Initialize
+  changeBallImageAndPosition();
+</script>

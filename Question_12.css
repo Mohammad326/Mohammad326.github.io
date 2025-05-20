@@ -1,0 +1,27 @@
+body
+    .animation-container {
+      width: 100%;
+      height: 300px;
+      background: linear-gradient(to right, #6dd5ed, #c56b94);
+      border: 3px solid lime;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      margin-top: 30px;
+    }
+  
+    .ball {
+      width: 60px;
+      height: 60px;
+      background: url('https://cdn-icons-png.flaticon.com/512/833/833472.png') center/cover no-repeat;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: bounce 2s infinite ease-in-out;
+    }
+  
+    @keyframes bounce {
+      0%, 100% { bottom: 0; }
+      50% { bottom: 80%; }
+    }

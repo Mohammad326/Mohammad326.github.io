@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New York City</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .hero {
+      position: relative;
+      background: url('NYC.png') center/cover no-repeat;
+      height: 300px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      background: rgba(255, 255, 255, 0.6);
+      display: inline-block;
+      padding: 10px 20px;
+      color: #222;
+    }
+
+    .hero a.btn {
+      background: none;
+      border: none;
+      color: blue;
+      font-weight: bold;
+    }
+
+    .hero .studio {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 1.2rem;
+      color: black;
+    }
+
+    .burger {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      background: white;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      border: 2px solid black;
+    }
+    .tabs {
+      display: none;
+      padding: 10px;
+      background: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="studio">Studio</div>
+  <div class="burger" onclick="toggleTabs()">
+    &#9776;
+  </div>
+  <div>
+    <h1>New York City</h1>
+    <a href="#" class="btn btn-primary">Explore Events</a>
+  </div>
+</div>
+
+<div class="tabs" id="tabs">
+  <div class="container">
+    <ul class="nav nav-tabs">
+      <li class="nav-item"><a class="nav-link active" href="#">Tab 1</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Tab 2</a></li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  function toggleTabs() {
+    const tabs = document.getElementById('tabs');
+    tabs.style.display = tabs.style.display === 'block' ? 'none' : 'block';
+  }
+</script>

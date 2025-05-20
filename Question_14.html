@@ -1,0 +1,144 @@
+<!-- Question 14: 4x1 Layout with Modal and Hover Effects -->
+<div class="container mt-5">
+  <div class="row text-center justify-content-center" style="background: linear-gradient(to right, lightgreen, lightpink); padding: 20px;">
+    <div class="col-md-3 hover-box p-3 bg-white m-2 border border-primary rounded">
+      <img src="American_football.png" alt="football" width="100">
+      <h5 class="fw-bold">Product 1</h5>
+      <p>description 1</p>
+      <a href="#">link3</a><br>
+      <button class="btn btn-info mt-2" onclick="openModal(1)">check more</button>
+    </div>
+    <div class="col-md-3 hover-box p-3 bg-white m-2 border border-danger rounded">
+      <img src="Basketball.png" alt="basketball" width="100">
+      <h5 class="fw-bold">Product 2</h5>
+      <p>description 2</p>
+      <a href="#">link2</a><br>
+      <button class="btn btn-danger mt-2" onclick="openModal(2)">check more</button>
+    </div>
+    <div class="col-md-3 hover-box p-3 bg-white m-2 border border-dark rounded">
+      <img src="Soccer_ball.jpg" alt="soccer" width="100">
+      <h5 class="fw-bold">Product 3</h5>
+      <p>description 3</p>
+      <a href="#">link3</a><br>
+      <button class="btn btn-info mt-2" onclick="openModal(3)">check more</button>
+    </div>
+    <div class="col-md-3 hover-box p-3 bg-white m-2 border border-danger rounded">
+      <img src="Tennis_ball.png" alt="tennis" width="100">
+      <h5 class="fw-bold">Product 4</h5>
+      <p>description 4</p>
+      <a href="#">link4</a><br>
+      <button class="btn btn-danger mt-2" onclick="openModal(4)">check more</button>
+    </div>
+  </div>
+</div>
+  
+  <!-- Modal Structure -->
+  <div class="modal fade" id="infoModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">More Information</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modalBody">...</div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    function toggleTabs() {
+      const tabs = document.getElementById('tabs');
+      tabs.style.display = tabs.style.display === 'block' ? 'none' : 'block';
+    }
+    function openModal(index) {
+      const modalBody = document.getElementById('modalBody');
+      const content = [
+        { title: "Product 1", img: "American_football.png", desc: "This is a modal footer" },
+        { title: "Product 2", img: "Basketball.png", desc: "This is a modal footer" },
+        { title: "Product 3", img: "Soccer_ball.jpg", desc: "This is a modal footer" },
+        { title: "Product 4", img: "Tennis_ball.png", desc: "This is a modal footer" }
+      ];
+      const selected = content[index - 1];
+      modalBody.innerHTML = `
+        <h5 class="modal-title">BS modal window title${index} 📙</h5>
+        <img src="${selected.img}" alt="" width="100">
+        <p>${selected.desc}</p>
+      `;
+      const modal = new bootstrap.Modal(document.getElementById('infoModal'));
+      modal.show();
+    }
+  </script>
+  
+  <!-- Animation Styles -->
+  <style>
+    .animation-container {
+      width: 100%;
+      height: 300px;
+      background: linear-gradient(to right, #6dd5ed, #c56b94);
+      border: 3px solid lime;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      margin-top: 30px;
+    }
+
+    .ball {
+      width: 60px;
+      height: 60px;
+      background: url('https://cdn-icons-png.flaticon.com/512/833/833472.png') center/cover no-repeat;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: bounce 2s infinite ease-in-out;
+    }
+
+    @keyframes bounce {
+      0%, 100% { bottom: 0; }
+      50% { bottom: 80%; }
+    }
+    /* Card hover effects and clean card styles */
+    .hover-box {
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 340px;
+    }
+    .hover-box:hover {
+      transform: translateY(-7px) scale(1.03);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.14);
+      z-index: 2;
+      border-width: 2.5px !important;
+    }
+    .hover-box img {
+      margin-bottom: 10px;
+    }
+    .hover-box h5,
+    .hover-box p,
+    .hover-box a {
+      text-align: center;
+    }
+    /* Modal image centering */
+    #modalBody {
+      text-align: center;
+    }
+    #modalBody img {
+      margin: 15px 0;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #modalBody .modal-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  </style>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  </body>
+  </html>
